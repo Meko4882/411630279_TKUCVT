@@ -82,6 +82,7 @@ nginx:latest         7150b3a39203        240MB         65.8MB    U
 
 ## 最小可重現命令鏈
 
+
 ## 排錯紀錄
 - 症狀：docker.list 不存在，apt-cache policy無候選板本
 - 診斷：`ls /etc/apt/sources.list.d/` 
