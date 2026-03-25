@@ -81,7 +81,42 @@ nginx:latest         7150b3a39203        240MB         65.8MB    U
 - 刪除條件：確認已經有新的快照備份且舊的已經不需要時，刪除最舊的
 
 ## 最小可重現命令鏈
+` # 故障前基線
+echo "=== 故障前 ==="
+ls /etc/apt/sources.list.d/
+apt-cache policy docker-ce | head -10 `
 
+` # 注入故障
+sudo mv /etc/apt/sources.list.d/docker.list /etc/apt/sources.list.d/docker.list.broken
+sudo apt update `
+
+` echo "=== 故障中 ==="
+ls /etc/apt/sources.list.d/
+apt-cache policy docker-ce | head -10
+sudo apt -y install docker-ce 2>&1 | tail -5 `
+
+` sudo mv /etc/apt/sources.list.d/docker.list.broken /etc/apt/sources.list.d/docker.list
+sudo apt update
+apt-cache policy docker-ce | head -5 `
+
+` echo "=== 回復後 ==="
+ls /etc/apt/sources.list.d/
+cat /etc/apt/sources.list.d/docker.list
+sudo apt update `
+
+` sudo systemctl status docker --no-pager
+sudo docker --version
+docker compose version
+sudo docker run --rm hello-world
+sudo docker images `
+
+`free -h
+df -h / `
+
+` sudo docker run -d --name test-nginx -p 8080:80 nginx:latest
+curl http://localhost:8080
+sudo docker stop test-nginx
+sudo docker rm test-nginx `
 
 ## 排錯紀錄
 - 症狀：docker.list 不存在，apt-cache policy無候選板本
