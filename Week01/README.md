@@ -81,8 +81,6 @@ nginx:latest         7150b3a39203        240MB         65.8MB    U
 - 刪除條件：確認已經有新的快照備份且舊的已經不需要時，刪除最舊的
 
 ## 最小可重現命令鏈
-`mkdir -p ~/virt-container-labs/w01`
-`cd ~/virt-container-labs/w01`
 
 ## 排錯紀錄
 - 症狀：docker.list 不存在，apt-cache policy無候選板本
