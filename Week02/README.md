@@ -37,9 +37,9 @@
 
 | 項目 | 故障前 | 故障中 | 回復後 |
 |---|---|---|---|
-| server-b 介面狀態 | UP | DOWN | （填入） |
-| dev-a ping server-b | 成功 | 失敗 | （填入） |
-| dev-a SSH server-b | 成功 | 失敗 | （填入） |
+| server-b 介面狀態 | UP | DOWN | UP |
+| dev-a ping server-b | 成功 | 失敗 | 成功 |
+| dev-a SSH server-b | 成功 | 失敗 | 成功 |
 
 ## 故障演練二：SSH 服務停止
 
