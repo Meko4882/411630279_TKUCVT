@@ -28,7 +28,8 @@ flowchart LR
 ip -4 addr show
 ```
 bastion:
-![image](screenshots/ip-4-addrshow-bastion.png)
+![image](screenshots/ip-4-addr-show-bastion.png)
+
 app:
 ![image](screenshots/ip-4-addr-show-app.png)
 2.從bastion去ping app
