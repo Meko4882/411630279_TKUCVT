@@ -55,6 +55,15 @@ ssh app
 
 ## 4. Part C：Docker 服務
 <systemctl status docker + curl 輸出>
+```
+systemctl status docker
+```
+![image](screenshots/systemctl-status-docker.png)
+
+```
+curl -I http://192.168.192.129:8080
+```
+![image](screenshots/curl.png)
 
 ## 5. Part D：故障演練
 ### 故障 1：<F1/F2/F3 擇一>
