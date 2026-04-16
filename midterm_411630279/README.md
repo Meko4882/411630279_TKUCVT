@@ -28,29 +28,29 @@ flowchart LR
 ip -4 addr show
 ```
 bastion:
-![ip-4-addrshow-bastion](screenshots/ip-4-addrshow-bastion)
+![ip-4-addrshow-bastion](screenshots/ip-4-addrshow-bastion.png)
 app:
-![image](screenshots/ip-4-addr-show-app)
+![image](screenshots/ip-4-addr-show-app.png)
 2.從bastion去ping app
 ```
 ping 192.168.192.129
 ```
-![image](screenshots/bastion-ping-app)
+![image](screenshots/bastion-ping-app.png)
 
 3.從app去ping bastion
 ```
 ping 192.168.192.131
 ```
-![image]screenshots/app-ping-bastion)
+![image](screenshots/app-ping-bastion.png)
 
 ## 3. Part B：金鑰、ufw、ProxyJump
 <防火牆規則表 + ssh app 成功證據>
 ```
 ssh app
 ```
-![image](screenshots/ssh-app)
-![image](screenshots/app-ufw)
-![image](screenshots/bastion-ufw)
+![image](screenshots/ssh-app.png)
+![image](screenshots/app-ufw.png)
+![image](screenshots/bastion-ufw.png)
 
 
 ## 4. Part C：Docker 服務
