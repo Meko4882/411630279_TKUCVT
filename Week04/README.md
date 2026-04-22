@@ -28,7 +28,8 @@
 
 ### 使用者群組
 （貼上 `id` 輸出，說明是否包含 docker 群組）
-![image](https://hackmd.io/_uploads/ryWScKLp-g.png)
+
+![image](id.png)
 
 - 輸出中沒有 docker，使用者不在 docker 群組裡，無法直接存取 socket
 
@@ -41,7 +42,7 @@
 ### systemctl status docker
 （貼上 `systemctl status docker` 輸出）
 
-![image](https://hackmd.io/_uploads/ryZ2RYUpZg.png)
+![image](systemctl-status-docker-1.png)
 
 
 ### journalctl 日誌分析
